@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
     }
   }))
 
+
 // this is a typescript way of saying that Header is a function that inside the brackets write what you want it to do.
 export const Header = () => {
     const classes = useStyles()
@@ -23,9 +24,9 @@ export const Header = () => {
         <div className={classes.container}>
         <div>
             {isConnected ? (
-                <button onClick={deactivate}> Disconnect</button>
+                <Button color="primary" variant="contained" onClick={deactivate}> Disconnect</Button>
             ) : (
-                <button onClick={() => activateBrowserWallet()}>Connect</button>
+                <Button color="primary" variant="contained" onClick={() => activateBrowserWallet()}>Connect</Button>
             )
             
             } 
